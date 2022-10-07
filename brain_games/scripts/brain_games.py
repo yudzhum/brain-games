@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def greet(message):
     print(f'{message}')
 
