@@ -8,4 +8,7 @@
 [![asciicast](https://asciinema.org/a/CKOY8LuDlKQ8kyG2b8ldIfodi.svg)](https://asciinema.org/a/CKOY8LuDlKQ8kyG2b8ldIfodi)
 
 ### Asciinema record of brain-calc game
-[![asciicast](https://asciinema.org/a/HVNFkliwzka0VnSVvm8nkAkXU.svg)](https://asciinema.org/a/HVNFkliwzka0VnSVvm8nkAkXU)
+[![asciicast](https://asciinema.org/a/C5jNpcg8dbvv4Whbw9BHS5rCu.svg)](https://asciinema.org/a/C5jNpcg8dbvv4Whbw9BHS5rCu)
+
+### Asciinema record of brain-gcd game
+[![asciicast](https://asciinema.org/a/kMToFUYM29NsB78HzOIybH0CR.svg)](https://asciinema.org/a/kMToFUYM29NsB78HzOIybH0CR)
