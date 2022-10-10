@@ -22,5 +22,5 @@ def game_engine(name, puzzles):
             print(f'Let\'s try again, {name}!')
             break
 
-    # User gave 3 correct answer
-    print(f'Congratulations, {name}!')
+        # User gave 3 correct answer
+        print(f'Congratulations, {name}!')
