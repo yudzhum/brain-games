@@ -10,8 +10,8 @@ def create_questions():
     index = 0
     while index < 3:
 
-        number1 = randint(0, 100)
-        number2 = randint(0, 100)
+        number1 = randint(1, 100)
+        number2 = randint(1, 100)
 
         questions.append(f'{number1} {number2}')
 
