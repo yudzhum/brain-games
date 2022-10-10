@@ -5,7 +5,7 @@ def game_engine(name, puzzles):
     Function take for input 2 arguments.
     Name of user and dictionary of questions and answers
     """
-
+    count = 0
     for question, answer in puzzles.items():
 
         # Ask user a question
@@ -17,10 +17,12 @@ def game_engine(name, puzzles):
         # Copmare user guess and answer
         if answer == guess:
             print('Correct!')
+            count += 1
         else:
             print(f"'{guess}' is wrong answer ;(. Correct answer was '{answer}'.")
             print(f'Let\'s try again, {name}!')
             break
 
-        # User gave 3 correct answer
+    # User gave 3 correct answer
+    if count == 3:
         print(f'Congratulations, {name}!')
