@@ -6,3 +6,6 @@
 
 ### Asciinema record of brain-even game
 [![asciicast](https://asciinema.org/a/CKOY8LuDlKQ8kyG2b8ldIfodi.svg)](https://asciinema.org/a/CKOY8LuDlKQ8kyG2b8ldIfodi)
+
+### Asciinema record of brain-calc game
+[![asciicast](https://asciinema.org/a/HVNFkliwzka0VnSVvm8nkAkXU.svg)](https://asciinema.org/a/HVNFkliwzka0VnSVvm8nkAkXU)
