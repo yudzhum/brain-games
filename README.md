@@ -12,3 +12,6 @@
 
 ### Asciinema record of brain-gcd game
 [![asciicast](https://asciinema.org/a/kMToFUYM29NsB78HzOIybH0CR.svg)](https://asciinema.org/a/kMToFUYM29NsB78HzOIybH0CR)
+
+### Asciinema record of brain-progression game
+[![asciicast](https://asciinema.org/a/DKtEZDXUlEPonaT5EOS8ZcnVf.svg)](https://asciinema.org/a/DKtEZDXUlEPonaT5EOS8ZcnVf)
