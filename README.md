@@ -15,3 +15,6 @@
 
 ### Asciinema record of brain-progression game
 [![asciicast](https://asciinema.org/a/DKtEZDXUlEPonaT5EOS8ZcnVf.svg)](https://asciinema.org/a/DKtEZDXUlEPonaT5EOS8ZcnVf)
+
+### Asciinema record of brain-prime game
+[![asciicast](https://asciinema.org/a/AeiNVkeBN4dY7OEmvlcVw8Zt7.svg)](https://asciinema.org/a/AeiNVkeBN4dY7OEmvlcVw8Zt7)
