@@ -3,41 +3,30 @@ from brain_games.game_engine import game_engine
 from random import randint
 
 
-def create_questions():
-    """Create list of 3 random numbers"""
-    questions = []
-
-    index = 0
-    while index < 3:
-
-        # Create random number in range 0 to 100
-        number = randint(0, 100)
-        questions.append(number)
-
-        index += 1
-
-    return questions
-
-
-def create_answers(questions):
+def create_puzzles():
     """Create dictionary of 3 question-answer pairs"""
     puzzles = {}
 
     index = 0
     while index < 3:
 
-        # Check if number is even and assign answer
-        answer = ''
-        if questions[index] % 2 == 0:
-            answer = 'yes'
-        else:
-            answer = 'no'
+        # Create random number
+        number = randint(0, 100)
 
-        puzzles.update({questions[index]: answer})
+        # Check if number is even and assign answer
+        answer = find_answer(number)
+
+        # Update dictionary
+        puzzles.update({number: answer})
 
         index += 1
 
     return puzzles
+
+
+# Check if number is even and return answer
+def find_answer(number):
+    return 'yes' if number % 2 == 0 else 'no'
 
 
 def brain_even():
@@ -46,8 +35,7 @@ def brain_even():
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
     # Cteate questions and answer
-    questions = create_questions()
-    puzzles = create_answers(questions)
+    puzzles = create_puzzles()
 
     # Play game
     game_engine(name, puzzles)
