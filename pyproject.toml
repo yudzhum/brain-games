@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = "5 games"
+description = "5 command-line math games"
 authors = ["Yuliya Dzhumanazarova <yaschick451@gmail.com>"]
 readme = "README.md"
+repository = "https://github.com/yudzhum/python-project-49"
 packages = [
 { include = "brain_games" }
 ]
