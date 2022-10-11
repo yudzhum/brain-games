@@ -25,7 +25,7 @@ def create_puzzles():
 
 
 def isprime(number):
-    """Take number and answer is it prime or not"""
+    """Find out is number is a prime"""
 
     # 1 is not a prime number
     if number == 1:
