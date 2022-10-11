@@ -4,9 +4,8 @@ from random import randint, choice
 from operator import add, sub, mul
 
 
-def create_questions():
-    """Create list of math expressions"""
-    questions = []
+def create_puzzles():
+    puzzles = {}
 
     index = 0
     while index < 3:
@@ -16,37 +15,25 @@ def create_questions():
 
         operator = choice('+-*')
 
-        questions.append(f'{operand1} {operator} {operand2}')
+        question = (f'{operand1} {operator} {operand2}')
 
-        index += 1
+        answer = str(find_answer(operand1, operator, operand2))
 
-    return questions
-
-
-def create_answers(questions):
-    """Create dictionary of questions-answers pairs"""
-    puzzles = {}
-
-    index = 0
-    while index < 3:
-        operand1, operator, operand2 = questions[index].split(' ')
-
-        operand1 = int(operand1)
-        operand2 = int(operand2)
-
-        operators = {
-            '+': add(operand1, operand2),
-            '-': sub(operand1, operand2),
-            '*': mul(operand1, operand2),
-        }
-
-        answer = str(operators[operator])
-
-        puzzles.update({questions[index]:answer})
+        puzzles.update({question: answer})
 
         index += 1
 
     return puzzles
+
+
+def find_answer(operand1, operator, operand2):
+    operators = {
+        '+': add(operand1, operand2),
+        '-': sub(operand1, operand2),
+        '*': mul(operand1, operand2),
+    }
+
+    return operators[operator]
 
 
 def brain_calc():
@@ -55,8 +42,7 @@ def brain_calc():
     print('What is the result of the expression?')
 
     # Cteate questions and answer
-    questions = create_questions()
-    puzzles = create_answers(questions)
+    puzzles = create_puzzles()
 
     # Play game
     game_engine(name, puzzles)
