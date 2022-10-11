@@ -6,7 +6,7 @@ def game_engine(name, puzzles):
     Name of user and dictionary of questions and answers
     """
     count = 0
-    for question, answer in puzzles.items():
+    for question, res in puzzles.items():
 
         # Ask user a question
         print(f'Question: {question}')
@@ -15,11 +15,11 @@ def game_engine(name, puzzles):
         guess = input('Your answer: ').strip()
 
         # Copmare user guess and answer
-        if answer == guess:
+        if res == guess:
             print('Correct!')
             count += 1
         else:
-            print(f"'{guess}' is wrong answer ;(. Correct answer was '{answer}'.")
+            print(f"'{guess}' is wrong answer ;(. Correct answer was '{res}'.")
             print(f'Let\'s try again, {name}!')
             break
 
