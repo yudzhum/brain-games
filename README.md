@@ -44,6 +44,12 @@ Run `brain-prime` for play. Type answer and hit `enter`.
 
 (Answers 'YES', 'Yes', 'y', 'NO', 'No') doesn't count as valid.
 
+### Requirements
+
+* OS: MacOS, Ubuntu, WSL (Windows Subsystem for Linux)
+
+* Python 3.8
+
 ### Setup
 
 Run `make package-install` for setup
