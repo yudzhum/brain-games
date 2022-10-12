@@ -13,7 +13,7 @@ def create_puzzles():
         number = randint(1, 100)
 
         # Create answer
-        answer = str(isprime(number))
+        answer = str(get_answer(number))
 
         # Update dictionary
         puzzles.update({str(number): answer})
@@ -24,7 +24,7 @@ def create_puzzles():
     return puzzles
 
 
-def isprime(number):
+def get_answer(number):
     """Find out is number is a prime"""
 
     # 1 is not a prime number
