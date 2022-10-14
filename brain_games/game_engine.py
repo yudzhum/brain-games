@@ -11,7 +11,16 @@ rules = {
     'brain-gcd': 'Find the greatest common divisor of given numbers.',
     'brain-calc': 'What is the result of the expression?',
     'brain-progression': 'What number is missing in the progression?',
-    'brain-prime': 'Answer "yes" if given number is prime. Otherwise answer "no".',
+    'brain-prime':
+        'Answer "yes" if given number is prime. Otherwise answer "no".',
+}
+
+rounds = {
+    'brain-even': brain_games.games.brain_even.generate_round,
+    'brain-gcd': brain_games.games.brain_gcd.generate_round,
+    'brain-calc': brain_games.games.brain_calc.generate_round,
+    'brain-progression': brain_games.games.brain_progression.generate_round,
+    'brain-prime': brain_games.games.brain_prime.generate_round
 }
 
 
@@ -31,24 +40,13 @@ def game_engine(game):
     print(f'{rules[game]}')
 
     # What game would be playing
-    if game == 'brain-prime':
-        get_round = brain_games.games.brain_prime.generate_round
-    elif game == 'brain-calc':
-        get_round = brain_games.games.brain_calc.generate_round
-    elif game == 'brain-even':
-        get_round = brain_games.games.brain_even.generate_round
-    elif game == 'brain-gcd':
-        get_round = brain_games.games.brain_gcd.generate_round
-    elif game == 'brain-progression':
-        get_round = brain_games.games.brain_progression.generate_round
-
+    get_round = rounds[game]
 
     index = 0
     while index < 3:
 
-        round = get_round()
-        question = round[0]
-        answer = round[1]
+        # Get game round
+        question, answer = get_round()
 
         # Ask user a question
         print(f'Question: {question}')
@@ -61,7 +59,8 @@ def game_engine(game):
             print('Correct!')
             index += 1
         else:
-            print(f"'{guess}' is wrong answer ;(. Correct answer was '{answer}'.")
+            print(f"'{guess}' is wrong answer ;(. ", end='')
+            print(f"Correct answer was '{answer}'.")
             print(f'Let\'s try again, {name}!')
             break
 
