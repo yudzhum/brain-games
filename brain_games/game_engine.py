@@ -6,6 +6,7 @@ import brain_games.games.brain_gcd
 import brain_games.games.brain_progression
 
 
+# Game rules dictionary
 rules = {
     'brain-even': 'Answer "yes" if the number is even, otherwise answer "no".',
     'brain-gcd': 'Find the greatest common divisor of given numbers.',
@@ -15,6 +16,7 @@ rules = {
         'Answer "yes" if given number is prime. Otherwise answer "no".',
 }
 
+# Dictionary with game round generating functions
 rounds = {
     'brain-even': brain_games.games.brain_even.generate_round,
     'brain-gcd': brain_games.games.brain_gcd.generate_round,
