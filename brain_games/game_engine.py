@@ -1,9 +1,6 @@
 import prompt
 
 
-FIRST_ROUND = 0
-FINAL_ROUND = 3
-
 START_SCORE = 0
 MAX_SCORE = 3
 
@@ -24,7 +21,7 @@ def run_game(game):
     print(f'{game.DESCRIPTION}')
 
     score = START_SCORE
-    for _ in range(FIRST_ROUND, FINAL_ROUND):
+    for _ in range(START_SCORE, MAX_SCORE):
 
         # Get game round
         question, answer = game.generate_round()
