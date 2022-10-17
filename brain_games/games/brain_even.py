@@ -1,27 +1,19 @@
 from random import randint
 
 
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+LOWER_LIMIT = 0
+UPPER_LIMIT = 100
+
+
 def generate_round():
     """Generate question-answer pair"""
 
     # Create random number
-    number = randint(0, 100)
+    number = randint(LOWER_LIMIT, UPPER_LIMIT)
 
     # Check if number is even and assign answer
-    answer = find_answer(number)
+    answer = 'yes' if number % 2 == 0 else 'no'
 
     return number, answer
-
-
-# Check if number is even and return answer
-def find_answer(number):
-    return 'yes' if number % 2 == 0 else 'no'
-
-
-def main():
-    round = generate_round()
-    print(f'{round}')
-
-
-if __name__ == '__main__':
-    main()
