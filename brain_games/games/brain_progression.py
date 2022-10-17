@@ -1,18 +1,28 @@
 from random import randint
 
 
+DESCRIPTION = 'What number is missing in the progression?'
+
+LOWER_LIMIT = 1
+UPPER_LIMIT = 100
+PROGRESSION_LENGTH = 10
+
+LOWER_STEP_LIMIT = 1
+UPPER_STEP_LIMIT = 10
+
+
 def generate_progression():
     """Generate arithmetic progression"""
 
     # Create the first term in the sequence
-    first_number = randint(1, 100)
+    first_number = randint(LOWER_LIMIT, UPPER_LIMIT)
     # Create the common difference between terms
-    step = randint(1, 10)
+    step = randint(LOWER_STEP_LIMIT, UPPER_STEP_LIMIT)
     count = 0
 
     # Create range of numbers, then add difference (d) by formula
     progression = []
-    for number in range(first_number, first_number + 10):
+    for number in range(first_number, first_number + PROGRESSION_LENGTH):
         num = number + step * count
         progression.append(num)
         count += 1
@@ -26,7 +36,7 @@ def generate_round():
     progression = generate_progression()
 
     # Choose number to hide randomly
-    hidden = randint(2, 9)
+    hidden = randint(LOWER_LIMIT, len(progression) - 1)
     # Take answer
     answer = str(progression[hidden])
     # Hide element
@@ -35,12 +45,3 @@ def generate_round():
     question = ' '.join([str(x) for x in progression])
 
     return question, answer
-
-
-def main():
-    round = generate_round()
-    print(f'{round}')
-
-
-if __name__ == '__main__':
-    main()
