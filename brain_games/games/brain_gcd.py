@@ -1,12 +1,18 @@
 from random import randint
 
 
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
+
+LOWER_LIMIT = 1
+UPPER_LIMIT = 100
+
+
 def generate_round():
     """Generate question-answer pair"""
 
     # Create question
-    number1 = randint(1, 100)
-    number2 = randint(1, 100)
+    number1 = randint(LOWER_LIMIT, UPPER_LIMIT)
+    number2 = randint(LOWER_LIMIT, UPPER_LIMIT)
 
     question = (f'{number1} {number2}')
 
@@ -28,12 +34,3 @@ def find_gcd(number1, number2):
     div_of_biggest = [x for x in div_of_smallest if biggest % x == 0]
 
     return max(div_of_biggest)
-
-
-def main():
-    round = generate_round()
-    print(f'{round}')
-
-
-if __name__ == '__main__':
-    main()
