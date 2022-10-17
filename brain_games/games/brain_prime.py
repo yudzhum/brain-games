@@ -1,27 +1,37 @@
 from random import randint
 
 
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
+LOWER_LIMIT = 1
+UPPER_LIMIT = 100
+
+
 def generate_round():
     """Generate question-answer pair"""
 
     # Create random number
-    number = randint(1, 100)
+    number = randint(LOWER_LIMIT, UPPER_LIMIT)
 
     # Create answer
-    answer = str(get_answer(number))
+    answer = ''
+    if is_prime(number):
+        answer = 'yes'
+    else:
+        answer = 'no'
 
     return number, answer
 
 
-def get_answer(number):
+def is_prime(number):
     """Find out is number is a prime"""
 
     # 1 is not a prime number
     if number == 1:
-        return 'no'
+        return False
     # 2 is prime number
     if number == 2:
-        return 'yes'
+        return True
 
     # Try to divide the number by all numbers
     # consecutively starting from 2
@@ -29,16 +39,7 @@ def get_answer(number):
     divider = 2
     while divider < number:
         if number % divider == 0:
-            return 'no'
+            return False
         divider += 1
     # There is no other dividers
-    return 'yes'
-
-
-def main():
-    round = generate_round()
-    print(f'{round}')
-
-
-if __name__ == '__main__':
-    main()
+    return True
